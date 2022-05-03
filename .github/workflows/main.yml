@@ -1,4 +1,4 @@
-name: Update Blog JSON data
+name: Update Words
 
 on:
   workflow_dispatch:
@@ -26,6 +26,7 @@ jobs:
           git commit -m "Update json files" -a || true
           # The above command will fail if no changes were present, so we ignore
           # the return code.
+
       - name: Push changes
         uses: tianheg/github-actions@push
         with:
