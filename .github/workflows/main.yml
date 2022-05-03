@@ -17,7 +17,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - run: curl -H "Authorization: ${{ secrets.EUDIC_TOKEN }}" https://api.frdic.com/api/open/v1/studylist/words?language=en >> words.json
+      - run: |
+          curl -H "Authorization: ${{ secrets.EUDIC_TOKEN }}" https://api.frdic.com/api/open/v1/studylist/words?language=en >> words.json
 
       - name: Commit files
         run: |
